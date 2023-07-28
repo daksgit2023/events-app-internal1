@@ -28,7 +28,8 @@ const mockEvents = {
     events: [
         { title: 'an event', id: 1, description: 'something really cool' },
         { title: 'another event', id: 2, description: 'something even cooler' },
-	{ title: 'another location',id: 3, description: 'someplace cool' }
+	{ title: 'another location',id: 3, description: 'someplace cool' },
+	{ thing: 'another thing',id: 4, thing: 'something'},
     ]
 };
 
@@ -57,6 +58,7 @@ app.post('/event', (req, res) => {
         title: req.body.title, 
         description: req.body.description,
 	location: req.body.location,
+	thing: req.body.thing,
         id : mockEvents.events.length + 1
      }
     // add to the mock array
